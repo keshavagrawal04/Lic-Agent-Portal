@@ -13,6 +13,10 @@ const AppRoutes = () => {
         element={<appRoutesConstants.authentication.element />}
       />
       <Route
+        path={appRoutesConstants.customerManagement.path}
+        element={<appRoutesConstants.customerManagement.element />}
+      />
+      <Route
         path={appRoutesConstants.pageNotFound.path}
         element={<appRoutesConstants.pageNotFound.element />}
       />

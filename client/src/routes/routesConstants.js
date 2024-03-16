@@ -24,7 +24,7 @@ export const appRoutesConstants = {
     element: AuthenticationRoutes,
   },
   customerManagement: {
-    path: "/customerManagement/*",
+    path: "/customer-management/*",
     element: CustomerManagementRoutes,
   },
 };
@@ -38,9 +38,12 @@ export const authenticationRoutesConstants = {
 };
 
 export const customerManagementRoutesConstants = {
-  customerManagement: { path: "/", CustomerManagement },
-  customers: { path: "/customers", Customers },
-  addCustomer: { path: "/add-customer", AddCustomer },
-  updateCustomer: { path: "/update-customer/:customerId", UpdateCustomer },
-  viewCustomer: { path: "/view-customer/:customerId", ViewCustomer },
+  customerManagement: { path: "/", element: CustomerManagement },
+  customers: { path: "/customers", element: Customers },
+  addCustomer: { path: "/add-customer", element: AddCustomer },
+  updateCustomer: {
+    path: "/update-customer/:customerId",
+    element: UpdateCustomer,
+  },
+  viewCustomer: { path: "/view-customer/:customerId", element: ViewCustomer },
 };
