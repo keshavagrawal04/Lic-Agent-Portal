@@ -1,0 +1,15 @@
+#imageContainer {
+  height: 100vh;
+  width: 100vh;
+  background-color: #ffffeb;
+}
+
+#pageNotFound {
+  height: 350px;
+  pointer-events: none;
+  user-select: none;
+}
+
+#btn {
+  background-color: #ff7d54 !important;
+}
