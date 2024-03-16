@@ -1,28 +1,52 @@
 import { Routes, Route } from "react-router-dom";
 import { authenticationRoutesConstants } from "./routesConstants";
+import { Authentication } from "../components";
+import { PageNotFound } from "../components";
+import {
+  ForgotPassword,
+  ChangePassword,
+  SignUp,
+  SignIn,
+} from "../pages/Authentication";
 
 const AuthenticationRoutes = () => {
   return (
     <Routes>
       <Route
-        path={authenticationRoutesConstants.authentication.path}
-        element={<authenticationRoutesConstants.authentication.element />}
-      />
-      <Route
         path={authenticationRoutesConstants.signUp.path}
-        element={<authenticationRoutesConstants.signUp.element />}
+        element={
+          <Authentication>
+            <SignUp />
+          </Authentication>
+        }
       />
       <Route
         path={authenticationRoutesConstants.signIn.path}
-        element={<authenticationRoutesConstants.signIn.element />}
+        element={
+          <Authentication>
+            <SignIn />
+          </Authentication>
+        }
       />
       <Route
         path={authenticationRoutesConstants.forgotPassword.path}
-        element={<authenticationRoutesConstants.forgotPassword.element />}
+        element={
+          <Authentication>
+            <ForgotPassword />
+          </Authentication>
+        }
       />
       <Route
         path={authenticationRoutesConstants.changePassword.path}
-        element={<authenticationRoutesConstants.changePassword.element />}
+        element={
+          <Authentication>
+            <ChangePassword />
+          </Authentication>
+        }
+      />
+      <Route
+        path={authenticationRoutesConstants.pageNotFound.path}
+        element={<PageNotFound />}
       />
     </Routes>
   );

@@ -6,12 +6,12 @@ import "./style.css";
 const PageNotFound = () => {
   return (
     <Container
-      id="imageContainer"
+      id="image-container"
       className="d-flex align-items-center justify-content-center"
     >
       <Row className="flex-column align-items-center">
         <Col>
-          <img id="pageNotFound" src={pageNotFoundImage} alt="pageNotFound" />
+          <img id="page-not-found" src={pageNotFoundImage} alt="pageNotFound" />
         </Col>
         <Col className="text-center">
           <Link

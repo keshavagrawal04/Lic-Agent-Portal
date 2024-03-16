@@ -1,30 +1,40 @@
 import { Routes, Route } from "react-router-dom";
 import { customerManagementRoutesConstants } from "./routesConstants";
+import { PageNotFound } from "../components";
+import {
+  CustomerManagement,
+  AddCustomer,
+  UpdateCustomer,
+  ViewCustomer,
+  Customers,
+} from "../pages/CustomerManagement";
 
 const CustomerManagementRoutes = () => {
   return (
     <Routes>
       <Route
         path={customerManagementRoutesConstants.customerManagement.path}
-        element={
-          <customerManagementRoutesConstants.customerManagement.element />
-        }
+        element={<CustomerManagement />}
       />
       <Route
         path={customerManagementRoutesConstants.addCustomer.path}
-        element={<customerManagementRoutesConstants.addCustomer.element />}
+        element={<AddCustomer />}
       />
       <Route
         path={customerManagementRoutesConstants.customers.path}
-        element={<customerManagementRoutesConstants.customers.element />}
+        element={<Customers />}
       />
       <Route
         path={customerManagementRoutesConstants.updateCustomer.path}
-        element={<customerManagementRoutesConstants.updateCustomer.element />}
+        element={<UpdateCustomer />}
       />
       <Route
         path={customerManagementRoutesConstants.viewCustomer.path}
-        element={<customerManagementRoutesConstants.viewCustomer.element />}
+        element={<ViewCustomer />}
+      />
+      <Route
+        path={customerManagementRoutesConstants.pageNotFound.path}
+        element={<PageNotFound />}
       />
     </Routes>
   );

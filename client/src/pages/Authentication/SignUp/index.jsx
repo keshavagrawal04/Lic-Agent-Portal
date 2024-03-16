@@ -1,5 +1,7 @@
+import { Authentication } from "../../../components";
+
 const SignUp = () => {
-  return <div>Sign Up</div>;
+  return <>SignIn</>;
 };
 
 export default SignUp;
